@@ -160,43 +160,43 @@
 {
 	AArch64_ADDSWri, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSWrs, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSWrx, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSXri, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSXrs, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSXrx, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDSXrx64, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
@@ -232,91 +232,91 @@
 {
 	AArch64_ADDWri, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDWrs, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDWrx, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDXri, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDXrs, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDXrx, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDXrx64, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv16i8, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv1i64, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv2i32, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv2i64, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv4i16, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv4i32, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv8i16, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ADDv8i8, ARM64_INS_ADD,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -358,61 +358,61 @@
 {
 	AArch64_ANDSWri, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDSWrs, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDSXri, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDSXrs, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDWri, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDWrs, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDXri, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDXrs, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDv16i8, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ANDv8i8, ARM64_INS_AND,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -448,61 +448,61 @@
 {
 	AArch64_BICSWrs, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICSXrs, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICWrs, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICXrs, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv16i8, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv2i32, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv4i16, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv4i32, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv8i16, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_BICv8i8, ARM64_INS_BIC,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -1288,25 +1288,25 @@
 {
 	AArch64_CPYi16, ARM64_INS_MOV,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_CPYi32, ARM64_INS_MOV,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_CPYi64, ARM64_INS_MOV,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_CPYi8, ARM64_INS_MOV,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
@@ -1540,37 +1540,37 @@
 {
 	AArch64_EORWri, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_EORWrs, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_EORXri, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_EORXrs, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_EORv16i8, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_EORv8i8, ARM64_INS_EOR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -5584,67 +5584,67 @@
 {
 	AArch64_LDRBpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRBpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRBroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRBroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRBui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDl, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRDui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -5680,67 +5680,67 @@
 {
 	AArch64_LDRHpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRHpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRHroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRHroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRHui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQl, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRQui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -5902,109 +5902,109 @@
 {
 	AArch64_LDRSl, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRSpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRSpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRSroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRSroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRSui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWl, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRWui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXl, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXpost, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXpre, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXroW, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXroX, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_LDRXui, ARM64_INS_LDR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
@@ -6562,49 +6562,49 @@
 {
 	AArch64_NEGv16i8, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv1i64, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv2i32, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv2i64, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv4i16, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv4i32, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv8i16, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_NEGv8i8, ARM64_INS_NEG,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -6622,85 +6622,85 @@
 {
 	AArch64_ORNWrs, ARM64_INS_ORN,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORNXrs, ARM64_INS_ORN,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORNv16i8, ARM64_INS_ORN,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORNv8i8, ARM64_INS_ORN,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRWri, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRWrs, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRXri, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRXrs, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv16i8, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv2i32, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv4i16, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv4i32, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv8i16, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_ORRv8i8, ARM64_INS_ORR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -10978,61 +10978,61 @@
 {
 	AArch64_STRBpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRBpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRBroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRBroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRBui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRDpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRDpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRDroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRDroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD,  0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRDui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
@@ -11068,151 +11068,151 @@
 {
 	AArch64_STRHpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRHpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRHroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRHroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRHui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRQpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRQpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRQroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRQroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRQui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRSpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRSpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRSroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRSroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRSui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_FPSIMD,  0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRWpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRWpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRWroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRWroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRWui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRXpost, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRXpre, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRXroW, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRXroX, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_STRXui, ARM64_INS_STR,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
@@ -11368,133 +11368,133 @@
 {
 	AArch64_SUBSWri, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSWrs, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSWrx, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSXri, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSXrs, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSXrx, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBSXrx64, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { ARM64_REG_NZCV, 0 }, { 0 }, 0, 0
+	{ 0 }, { ARM64_REG_NZCV, 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBWri, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBWrs, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBWrx, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBXri, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBXrs, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBXrx, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBXrx64, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_BASE, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv16i8, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv1i64, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv2i32, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv2i64, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv4i16, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv4i32, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv8i16, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
 	AArch64_SUBv8i8, ARM64_INS_SUB,
 #ifndef CAPSTONE_DIET
-	{ 0 }, { 0 }, { ARM64_GRP_NEON, 0 }, 0, 0
+	{ 0 }, { 0 }, { ARM64_GRP_NEON, ARM64_GRP_FPSIMD, 0 }, 0, 0
 #endif
 },
 {
