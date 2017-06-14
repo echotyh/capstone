@@ -39,6 +39,19 @@ all_tests = (
         (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0x649123ffe1, b"\x66\xe8\x35\x64", "callw 0x641a"),
         (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0x649123ffe1, b"\x66\xe9\x35\x64", "jmp 0x641a"),
         (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_ATT, 0xffe1, b"\x66\xe9\x35\x64\x93\x53", "jmp 0x5394641c"),
+        #issue 884 https://github.com/aquynh/capstone/issues/884
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0xffe1, b"\x64\x48\x03\x04\x25\x00\x00\x00\x00", "addq %fs:0, %rax"),
+        #issue 807 https://github.com/aquynh/capstone/issues/807
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x4c\x0f\x00\x80\x16\x76\x8a\xfe", "sldt -0x17589ea(%rax)"),
+        #issue 805 
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x48\xff\xa9\xf1\x80\x16\x76", "ljmpq *0x761680f1(%rcx)"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x48\x4c\x0f\xb5\x80\x16\x76\x8a\xfe", "lgsq -0x17589ea(%rax), %r8"),
+        #issue 804 https://github.com/aquynh/capstone/issues/804
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x66\x48\xf3\xd1\xc0", "rol $1, %ax"),
+        #issue 789 https://github.com/aquynh/capstone/issues/789
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x8e\x1e", "movw (%rsi), %ds"),
+        #issue 717 https://github.com/aquynh/capstone/issues/717
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_ATT, 0, b"\x48\x8b\x04\x25\x00\x00\x00\x00", "movq , %rax"),
 
         # issue 452 https://github.com/aquynh/capstone/issues/452
         (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0xffe1, b"\x6C", "insb byte ptr es:[di], dx"),
@@ -692,7 +705,108 @@ all_tests = (
         (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0xffe1, b"\x66\x0f\x01\x1d", "lidt [di]"),
 
         # issues 702 https://github.com/aquynh/capstone/issues/702
-        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\x85\xC8", "test eax, ecx")
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\x85\xC8", "test eax, ecx"),
+        #issue 809 https://github.com/aquynh/capstone/issues/809
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x0f\x29\x8d\xf0\xfd\xff\xff", "movaps xmmword ptr [rbp - 0x210], xmm1"),
+        #issue 806
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x0f\x35", "sysexit "),
+        #issue 856 https://github.com/aquynh/capstone/issues/856
+        (CS_ARCH_PPC, CS_MODE_64 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x80\x00\x00\x00", "lwz r0, 0(0)"),
+        #issue 702 https://github.com/aquynh/capstone/issues/702
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x84\xc8", "test al, cl"),
+        #issue 544 https://github.com/aquynh/capstone/issues/544
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xdf\x30", "fbstp tbyte ptr [rax]"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xdf\x20", "fbld tbyte ptr [rax]"),
+        #issue 499 https://github.com/aquynh/capstone/issues/499
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x48\xb8\x00\x00\x00\x00\x00\x00\x00\x80", "movabs rax, 0x8000000000000000"),
+        #issue 492 https://github.com/aquynh/capstone/issues/492
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\xFF\x2D\x00\x00\x00\x00", "ljmp [0]"),
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\x0F\xAE\x04\x24", "fxsave [esp]"),
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\x0F\xAE\x0C\x24", "fxrstor [esp]"),
+        #isuue 446 https://github.com/aquynh/capstone/issues/446
+        (CS_ARCH_ARM, CS_MODE_ARM | CS_MODE_BIG_ENDIAN, 0, 0, b"\xE1\xF3\x22\xD1", "ldrsb r2, [r3, #0x21]!"),
+        #issue 459 https://github.com/aquynh/capstone/issues/446
+        (CS_ARCH_ARM, CS_MODE_ARM | CS_MODE_BIG_ENDIAN, 0, 0, b"\xE1\x91\x20\xD3", "ldrsb r2, [r1, r3]"),
+        (CS_ARCH_ARM, CS_MODE_ARM | CS_MODE_BIG_ENDIAN, 0, 0, b"\xE1\x11\x20\xD3", "ldrsb r2, [r1, -r3]"),
+        #issue 458 https://github.com/aquynh/capstone/issues/458
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\xA1\x12\x34", "mov ax, word ptr [0x3412]"),
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\xA1\x12\x34\x90\x90", "mov eax, dword ptr [0x90903412]"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xA1\x12\x34\x90\x90\x90\x90\x90\x90", "movabs eax, dword ptr [0x9090909090903412]"),
+        #issue 456 https://github.com/aquynh/capstone/issues/456
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\xE9\x35\x64", "jmp 0x6438"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x66\xE9\x35\x64\x93\x53", "jmp 0x5393643b"),
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\xE9\x35\x64\x93\x53", "jmp 0x5393643a"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xE9\x35\x64\x93\x53", "jmp 0x5393643a"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x66\xe8\x35\x64\x93\x53", "call 0x5393643b"),
+        #issue 454  https://github.com/aquynh/capstone/issues/456
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\xAD", "repne lodsd eax, dword ptr [rsi]"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\x6C", "repne insb byte ptr [rdi], dx"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\x6D", "repne insd dword ptr [rdi], dx"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\x6E", "repne outsb dx, byte ptr [rsi]"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\x6F", "repne outsd dx, dword ptr [rsi]"),
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xF2\xAC", "repne lodsb al, byte ptr [rsi]"),
+        #isue 450 https://github.com/aquynh/capstone/issues/450
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xFF\x2D\x34\x35\x23\x01", "ljmp [rip + 0x1233534]"),
+        #issue 32 https://github.com/aquynh/capstone/issues/32
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x1c\x00\x40\x14", "bnez $v0, 0x74"),
+        #issue 34 https://github.com/aquynh/capstone/issues/34
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x25\x71\x75", "and ax, 0x7571"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x2d\x00\x66", "sub ax, 0x6600"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x35\x73\x20", "xor ax, 0x2073"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\xed", "in ax, dx"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x67\x65\x3a\x20", "cmp ah, byte ptr gs:[eax]"),
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\x66\x69\x6c\x65\x20\x2e\x2e\x2e", "imul ebp, word ptr [si + 0x65], 0x2e2e2e20"),
+        #issue 35 https://github.com/aquynh/capstone/issues/35
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\xe8\xc6\x02", "call 0x2c9"),
+        #issue 43 https://github.com/aquynh/capstone/issues/43
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x8f\x99\x80\x10", "lw $t9, -0x7ff0($gp)"),
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x03\xe0\x78\x21", "move $t7, $ra"),
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x03\x20\xf8\x09", "jalr $t9"),
+        #issue 54 https://github.com/aquynh/capstone/issues/54
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\x93", "xchg eax, ebx"),
+        #issue 85 https://github.com/aquynh/capstone/issues/85
+        (CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, 0, 0, b"\xa0\x05\x3f\x29", "stp w0, w1, [x13, #-8]"),
+        #issue 103 https://github.com/aquynh/capstone/issues/103
+        (CS_ARCH_ARM, CS_MODE_ARM, 0, 0, b"\x3e\x06\x00\xfa", "blx #0x1900"),
+        (CS_ARCH_ARM, CS_MODE_ARM, 0, 0, b"\xbe\xf9\xff\xfa", "blx 0"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x00\xf0\x09\xf8", "bl #0x16"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\xff\xf7\xf3\xff", "bl 0"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x00\xf0\x0a\xe8", "blx #0x18"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\xff\xf7\xf2\xef", "blx 0"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x47\xf2\x3e\xd9", "bl #0xa47280"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\xb8\xf5\xbe\xde", "bl 0"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x47\xf2\x3e\xc9", "blx #0xa47280"),
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\xb8\xf5\xbe\xce", "blx 0"),
+        #issue 151 https://github.com/aquynh/capstone/issues/151
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x4d\x8d\x3d\x02\x00\x00\x00", "lea r15, [rip + 2]"),
+        #issue 160 https://github.com/aquynh/capstone/issues/160
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x64\x33\xc0", "xor eax, eax"),
+        #issue 174 https://github.com/aquynh/capstone/issues/174
+        (CS_ARCH_PPC, CS_MODE_64 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x40\x82\x00\x14", "bne 0x14"),
+        #issue 176 https://github.com/aquynh/capstone/issues/176
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\xE8\xFA\xFF\xFF\xBF", "call 0xffffffffbfffffff"),
+        (CS_ARCH_ARM, CS_MODE_ARM, 0, 0, b"\xfd\xff\xff\x1a", "bne #0xfffffffc"),
+        #issue 213 https://github.com/aquynh/capstone/issues/213
+        (CS_ARCH_X86, CS_MODE_16, CS_OPT_SYNTAX_INTEL, 0, b"\xea\xaa\xff\x00\xf0", "ljmp word 0xf000:0xffaa"),
+        #ISSUE 214 https://github.com/aquynh/capstone/issues/214
+        (CS_ARCH_SPARC, CS_MODE_BIG_ENDIAN, 0, 0, b"\x40\x00\xe2\x8a", "call 0x38a28"),
+        #issue 215 https://github.com/aquynh/capstone/issues/214
+        (CS_ARCH_PPC, CS_MODE_64 | CS_MODE_BIG_ENDIAN, 0, 0, b"\x48\x02\x51\x80", "b 0x25180"),
+        #issue 305 https://github.com/aquynh/capstone/issues/305
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x34\x8b", "xor al, 0x8b"),
+        #issue 369 https://github.com/aquynh/capstone/issues/369
+        (CS_ARCH_X86, CS_MODE_64, CS_OPT_SYNTAX_INTEL, 0, b"\x66\x45\x0F\x74\xE0", "pcmpeqb xmm12, xmm8"),
+        #issue 373 https://github.com/aquynh/capstone/issues/373
+        (CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x3f\xf1\x1f\x38", "sturb wzr, [x9, #-1]"),
+        #issue 409 https://github.com/aquynh/capstone/issues/409
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_LITTLE_ENDIAN, 0, 0, b"\x23\x10\x62\x00", "subu $v0, $v1, $v0"),
+        #issue 426 https://github.com/aquynh/capstone/issues/426
+        (CS_ARCH_SPARC, CS_MODE_BIG_ENDIAN, 0, 0, b"\xbb\x70\x00\x00", "popc %g0, %i5"),
+        #issue 446 https://github.com/aquynh/capstone/issues/446
+        (CS_ARCH_ARM, CS_MODE_ARM | CS_MODE_BIG_ENDIAN, 0, 0, b"\xE1\xF3\x22\xD1", "ldrsb r2, [r3, #0x21]!"),
+        #issue 448 https://github.com/aquynh/capstone/issues/448
+        (CS_ARCH_X86, CS_MODE_32, CS_OPT_SYNTAX_INTEL, 0, b"\xEA\x12\x34\x56\x78\x9A\xBC", "ljmp 0xbc9a:0x78563412"),
+
 )
 
 _python3 = sys.version_info.major == 3
@@ -720,6 +834,15 @@ def str_arch_mode(a, m):
         (CS_ARCH_X86, CS_MODE_16): "X86-16bit",
         (CS_ARCH_X86, CS_MODE_32): "X86-32bit",
         (CS_ARCH_X86, CS_MODE_64): "X86-64bit",
+        (CS_ARCH_PPC, CS_MODE_64 | CS_MODE_BIG_ENDIAN): "PPC64-big endian",
+        (CS_ARCH_ARM, CS_MODE_ARM): "ARM32",
+        (CS_ARCH_ARM, CS_MODE_ARM | CS_MODE_BIG_ENDIAN): "ARM32 + big endian",
+        (CS_ARCH_ARM, CS_MODE_THUMB | CS_MODE_LITTLE_ENDIAN): "THUMB",
+        (CS_ARCH_ARM64, CS_MODE_LITTLE_ENDIAN): "AARCH64",
+        #(CS_ARCH_ARM64, CS_MODE_BIG_ENDIAN): "AARCH64 + big endian",
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_LITTLE_ENDIAN): "MIPS32 + little endian",
+        (CS_ARCH_MIPS, CS_MODE_MIPS32 | CS_MODE_BIG_ENDIAN): "MIPS32 + big endian",
+        (CS_ARCH_SPARC, CS_MODE_BIG_ENDIAN): "SPARC",
     }
 
     return amlist[(a, m)]
